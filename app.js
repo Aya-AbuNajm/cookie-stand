@@ -1,4 +1,4 @@
-// "use strict";
+ "use strict";
 
 function getRndInteger(max) {
     return Math.floor(Math.random() * max);
@@ -24,7 +24,6 @@ function Location(name, min, max, avgPerCustSales) {
         this.avgPerCustSales = Math.ceil(avgPerCustSales),
         this.salesPerHour = [],
         this.totalSeals = 0,
-
         this.calc();
 }
 
@@ -47,7 +46,8 @@ Location.prototype.calc = function() {
 
 
 
-// lab 06
+
+
 const seattle = {
     name: 'seattle',
     min: 23,
@@ -101,17 +101,7 @@ const seattle = {
 
         console.log('container');
 
-        /*
-        <main>
-         <h1> Shope Location</h1>
-         <ul>
-          <li> 6am: 16 cookies</li>
-          <li> 7pm: 30 cookies</li>
-          <li> total : 875 cookies </li>
-          </ul>
-        <main>  
-        */
-
+      
 
     },
 }
@@ -135,14 +125,14 @@ const tokyo = {
         totalSeals: 0,
         calc: function() {
             for (let i = 0; i < 14; i++) {
-
+    
                 this.avg.push(getRndInteger(this.min, this.max));
             }
             for (let j = 0; j < 14; j++) {
                 this.salesPerHour.push(this.avgPerCustSales * this.avg[j]);
                 this.totalSeals += this.salesPerHour[j];
-
-
+    
+       
 
             }
         },
@@ -178,22 +168,7 @@ const tokyo = {
 
             console.log('container');
 
-            /*
-            <main>
-             <h1> Shope Location</h1>
-             <ul>
-              <li> 6am: 16 cookies</li>
-              <li> 7pm: 30 cookies</li>
-              <li> total : 875 cookies </li>
-              </ul>
-            <main>  
-            */
-
-
-            // },
-            // }
-
-            // seattle.calc() console.log(tokyo.avg) this.seattle.render()
+           
 
 
         }
@@ -256,17 +231,7 @@ const tokyo = {
 
                     console.log('container');
 
-                    /*
-                    <main>
-                     <h1> Shope Location</h1>
-                     <ul>
-                      <li> 6am: 16 cookies</li>
-                      <li> 7pm: 30 cookies</li>
-                      <li> total : 875 cookies </li>
-                      </ul>
-                    <main>  
-                    */
-
+                 
 
                 },
             }
@@ -329,16 +294,7 @@ const tokyo = {
 
                     console.log('container');
 
-                    /*
-                    <main>
-                     <h1> Shope Location</h1>
-                     <ul>
-                      <li> 6am: 16 cookies</li>
-                      <li> 7pm: 30 cookies</li>
-                      <li> total : 875 cookies </li>
-                      </ul>
-                    <main>  
-                    */
+                   
 
 
                 },
@@ -353,10 +309,10 @@ const tokyo = {
 
             const lima = {
                 name: 'Lima',
-                min: 20,
-                max: 38,
+                min: 2,
+                max: 16,
                 avg: [],
-                avgPerCustSales: 2.3,
+                avgPerCustSales: 4.6,
                 salesPerHour: [],
                 totalSeals: 0,
                 calc: function() {
@@ -419,98 +375,7 @@ const tokyo = {
                 },
             }
 
-        //     lima.calc() console.log(lima.avg) lima.render() ima.avg)
-        // lima.render()() console.log(lima.avg) lima.render() ima.avg)
-        // lima.render()() console.log(lima.avg) lima.render() ima.avg)
-        // lima.render()() console.log(lima.avg) lima.render() ima.avg)
-        // lima.render();
-
-       
-
-
-// // data part 
-// Location.prototype.render = function() {
-
-
-
-
-//     let trData = document.createElement('tr');
-//     tableData.appendChild(trData);
-//     let tdColom = document.createElement('td');
-//     trData.appendChild(tdColom);
-//     tdColom.textContent = this.name
-
-//     for (let i = 0; i < hours.length; i++) {
-//         tdColom = document.createElement('td');
-//         trData.appendChild(tdColom);
-//         tdColom.textContent = this.salesPerHour[i];
-//     }
-
-//     tdColom = document.createElement('td');
-//     trData.appendChild(tdColom);
-//     tdColom.textContent = this.totalSeals;
-// };
-
-
-// // footer total 
-// let footerTotal = function() {
-//     let footerRow = document.createElement('tr');
-//     // delet 
-//     tableData.appendChild(footerRow);
-//     let tdColom = document.createElement('td');
-//     footerRow.appendChild(tdColom);
-//     tdColom.textContent = 'total'
-
-//     let totalOoTotal = 0
-//     for (let i = 0; i < hours.length - 1; i++) {
-//         let tdColom = document.createElement('td');
-//         footerRow.appendChild(tdColom);
-//         let totalColom = 0
-
-//         for (let indx = 0; indx > city.length; indx++) {
-//             totalColom = totalColom + city[indx].salesPerHour[i];
-//             console.log(city[indx].salesPerHour[i]);
-
-
-//         }
-//         tdColom.textContent = totalColom;
-//         totalOoTotal = totalOoTotal + totalColom
-//     }
-//     let finalTotal = document.createElement('td');
-//     footerRow.appendChild(finalTotal);
-//     finalTotal.textContent = totalOoTotal
-// }
-
-
-
-// // header for table 
-// function renderHeader() {
-//     const tableRow = document.createElement('tr');
-//     tableData.appendChild(tableRow);
-
-//     const tableHeadingEl = document.createElement('th');
-//     tableRow.appendChild(tableHeadingEl);
-//     tableHeadingEl.textContent = 'Location';
-
-//     for (let i = 0; i < hours.length; i++) {
-//         const tableHeadingEl = document.createElement('th');
-//         tableRow.appendChild(tableHeadingEl);
-//         tableHeadingEl.textContent = hours[i];
-//     }
-
-//     const lastTableHeadingEl = document.createElement('th');
-//     tableRow.appendChild(lastTableHeadingEl);
-//     lastTableHeadingEl.textContent = 'Daily Location Total';
-// }
-
-
-// const seattle = new Location('seattle', 23, 65, 6.3);
-// const tokyo = new Location('Tokyo', 3, 24, 1.2);
-// const dubai = new Location('Dubai', 11, 38, 3.7);
-// const paris = new Location('Paris', 20, 38, 2.3);
-// const lima = new Location('Lima', 2, 16, 4.6);
-
-// function call
+   
 let city = [seattle, tokyo, dubai, paris, lima];
 
 
