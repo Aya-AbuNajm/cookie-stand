@@ -1,4 +1,4 @@
- "use strict";
+ //"use strict";
 
 function getRndInteger(max) {
     return Math.floor(Math.random() * max);
@@ -57,14 +57,14 @@ const seattle = {
     salesPerHour: [],
     totalSeals: 0,
     calc: function() {
-        for (let i = 0; i < 14; i++) {
+        for (let i = 0; i < hours.length; i++) {
 
             this.avg.push(getRndInteger(this.min, this.max));
         }
-        for (let j = 0; j < 14; j++) {
-            this.salesPerHour.push(this.avgPerCustSales * this.avg[j]);
+        for (let j = 0; j < hours.length; j++) {
+            this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
             this.totalSeals += this.salesPerHour[j];
-
+            
 
 
         }
@@ -111,7 +111,8 @@ seattle.calc()
 //  seattle.render()
 
 
-
+console.log(seattle.avg);
+console.log(seattle.salesPerHour);
 
 // Tokyo 
 
@@ -124,12 +125,12 @@ const tokyo = {
         salesPerHour: [],
         totalSeals: 0,
         calc: function() {
-            for (let i = 0; i < 14; i++) {
-    
+            for (let i = 0; i < hours.length; i++) {
+
                 this.avg.push(getRndInteger(this.min, this.max));
             }
-            for (let j = 0; j < 14; j++) {
-                this.salesPerHour.push(this.avgPerCustSales * this.avg[j]);
+            for (let j = 0; j < hours.length; j++) {
+                this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
                 this.totalSeals += this.salesPerHour[j];
     
        
@@ -174,7 +175,7 @@ const tokyo = {
         }
       
     } 
-// Dubai 
+//                            Dubai 
 
 
 
@@ -187,14 +188,13 @@ const tokyo = {
                 salesPerHour: [],
                 totalSeals: 0,
                 calc: function() {
-                    for (let i = 0; i < 14; i++) {
+                    for (let i = 0; i < hours.length; i++) {
 
                         this.avg.push(getRndInteger(this.min, this.max));
                     }
-                    for (let j = 0; j < 14; j++) {
-                        this.salesPerHour.push(this.avgPerCustSales * this.avg[j]);
+                    for (let j = 0; j < hours.length; j++) {
+                        this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
                         this.totalSeals += this.salesPerHour[j];
-
 
 
                     }
@@ -250,14 +250,13 @@ const tokyo = {
                 salesPerHour: [],
                 totalSeals: 0,
                 calc: function() {
-                    for (let i = 0; i < 14; i++) {
+                    for (let i = 0; i < hours.length; i++) {
 
                         this.avg.push(getRndInteger(this.min, this.max));
                     }
-                    for (let j = 0; j < 14; j++) {
-                        this.salesPerHour.push(this.avgPerCustSales * this.avg[j]);
+                    for (let j = 0; j < hours.length; j++) {
+                        this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
                         this.totalSeals += this.salesPerHour[j];
-
 
 
                     }
@@ -304,7 +303,7 @@ const tokyo = {
              console.log(paris.avg)
             //  paris.render()
 
-            // Lima
+            //                                        Lima
 
 
             const lima = {
@@ -316,27 +315,24 @@ const tokyo = {
                 salesPerHour: [],
                 totalSeals: 0,
                 calc: function() {
-                    for (let i = 0; i < 14; i++) {
+                    for (let i = 0; i < hours.length; i++) {
 
                         this.avg.push(getRndInteger(this.min, this.max));
                     }
-                    for (let j = 0; j < 14; j++) {
-                        this.salesPerHour.push(this.avgPerCustSales * this.avg[j]);
+                    for (let j = 0; j < hours.length; j++) {
+                        this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
                         this.totalSeals += this.salesPerHour[j];
-
 
 
                     }
                 },
 
 
-
-
-                render: function() {
+                render: function(){
                     const sealDiv = document.getElementById('seal');
 
                     const name = document.createElement('h2');
-                    name.textContent = 'Lima';
+                    name.textContent = 'lima';
                     sealDiv.append(name);
 
                     const list = document.createElement('ul');
@@ -360,20 +356,8 @@ const tokyo = {
 
                     console.log('container');
 
-                    /*
-                    <main>
-                     <h1> Shope Location</h1>
-                     <ul>
-                      <li> 6am: 16 cookies</li>
-                      <li> 7pm: 30 cookies</li>
-                      <li> total : 875 cookies </li>
-                      </ul>
-                    <main>  
-                    */
-
-
                 },
-            }
+            } 
 
    
 let city = [seattle, tokyo, dubai, paris, lima];
