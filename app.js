@@ -30,10 +30,7 @@ function Location(name, min, max, avgPerCustSales) {
 
 Location.prototype.calc = function() {
 
-    // for (let i = 0; i < 14; i++) {
-
-    //     this.avg.push(getRndInteger(this.min, this.max));
-    // }
+   
     for (let j = 0; j < hours.length; j++) {
         // this.salesPerHour.push(Math.ceil(this.avgPerCustSales * this.avg[j]));
         this.salesPerHour[j] = this.getRndInteger(this.min, this.max) * this.avgPerCustSales
@@ -48,8 +45,8 @@ Location.prototype.calc = function() {
 
 
 
-const seattle = {
-    name: 'seattle',
+const Seattle = {
+    name: 'Seattle',
     min: 23,
     max: 65,
     avg: [],
@@ -64,8 +61,8 @@ const seattle = {
         for (let j = 0; j < hours.length; j++) {
             this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
             this.totalSeals += this.salesPerHour[j];
+         
             
-
 
         }
     },
@@ -82,7 +79,7 @@ const seattle = {
 
         const list = document.createElement('ul');
         for (let i = 0; i < hours.length; i++) {
-            // creat li 
+        
             const item = document.createElement('li');
 
             // inject hours:sales
@@ -99,20 +96,20 @@ const seattle = {
 
         sealDiv.append(list);
 
-        console.log('container');
+       
 
       
 
     },
 }
 
-seattle.calc()
- console.log(seattle.avg) 
-//  seattle.render()
+Seattle.calc()
+ console.log(Seattle.avg) 
+//  Seattle.render()
 
 
-console.log(seattle.avg);
-console.log(seattle.salesPerHour);
+console.log(Seattle.avg);
+console.log(Seattle.salesPerHour);
 
 // Tokyo 
 
@@ -167,7 +164,7 @@ const tokyo = {
 
             sealDiv.append(list);
 
-            console.log('container');
+            
 
            
 
@@ -179,8 +176,8 @@ const tokyo = {
 
 
 
-            const dubai = {
-                name: 'Dubai',
+            const DubaiCity = {
+                name: 'DubaiCity',
                 min: 11,
                 max: 38,
                 avg: [],
@@ -195,7 +192,7 @@ const tokyo = {
                     for (let j = 0; j < hours.length; j++) {
                         this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
                         this.totalSeals += this.salesPerHour[j];
-
+            
 
                     }
                 },
@@ -207,7 +204,7 @@ const tokyo = {
                     const sealDiv = document.getElementById('seal');
 
                     const name = document.createElement('h2');
-                    name.textContent = 'Dubai';
+                    name.textContent = 'DubaiCity';
                     sealDiv.append(name);
 
                     const list = document.createElement('ul');
@@ -229,14 +226,14 @@ const tokyo = {
 
                     sealDiv.append(list);
 
-                    console.log('container');
+                   
 
                  
 
                 },
             }
-            dubai.calc()
-            console.log(dubai.avg)
+            DubaiCity.calc()
+            console.log(DubaiCity.avg)
             //  dubai.render()
 
             // paris
@@ -257,7 +254,7 @@ const tokyo = {
                     for (let j = 0; j < hours.length; j++) {
                         this.salesPerHour.push(Math.floor(this.avg[j]*this.avgPerCustSales));
                         this.totalSeals += this.salesPerHour[j];
-
+            
 
                     }
                 },
@@ -291,7 +288,7 @@ const tokyo = {
 
                     sealDiv.append(list);
 
-                    console.log('container');
+                   
 
                    
 
@@ -354,18 +351,19 @@ const tokyo = {
 
                     sealDiv.append(list);
 
-                    console.log('container');
+                   
+
 
                 },
             } 
 
    
-let city = [seattle, tokyo, dubai, paris, lima];
+let city = [Seattle, tokyo, DubaiCity, paris, lima];
 
 
-seattle.render();
+Seattle.render();
 tokyo.render();
-dubai.render();
+DubaiCity.render();
 paris.render();
 lima.render();
 
