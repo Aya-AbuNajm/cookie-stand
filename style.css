@@ -3,12 +3,31 @@ ul {
 }
 
 header {
+    background-color: rgb(99, 28, 19);
+    color: white;
+    text-align: center;
     color: rgb(252, 117, 76);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: inherit;
     font-style: oblique;
+    height: 100px;
 }
 
 body {
     background-color: antiquewhite;
+}
+
+#im4{
+   margin-left: 30px ;
+    width: 90%;
+}
+#allimg{
+    margin: 20px ;
+    background-color: rgb(255, 255, 255);
+}
+footer{
+    background-color: rgb(99, 28, 19);
+    color: white;
+    text-align: center;
+    
 }
